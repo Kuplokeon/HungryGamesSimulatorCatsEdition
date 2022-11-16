@@ -18,12 +18,6 @@ namespace HungryGamesSimulatorCatsEdition
 
         public Point position;
 
-        public Cat(string name)
-        {
-            this.name = name;
-            Awake();
-        }
-
         public Cat()
         {
             Awake();

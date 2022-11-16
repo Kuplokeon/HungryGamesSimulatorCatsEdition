@@ -47,7 +47,7 @@ namespace HungryGamesSimulatorCatsEdition
 
             for (int i = 0; i < 500; i++)
             {
-                Cat newCat = new Cat("Bustergraph");
+                Cat newCat = new Cat();
                 //newCat.position.Y = (i / 10) + (grassBackground.Width / 2);
                 newCat.position.Y = (i / 10);
                 //newCat.position.X = (i % 10) + (grassBackground.Height / 2);
