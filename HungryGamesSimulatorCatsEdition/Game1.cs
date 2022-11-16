@@ -45,7 +45,7 @@ namespace HungryGamesSimulatorCatsEdition
             
             Console.WriteLine(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width);
 
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 300; i++)
             {
                 Cat newCat = new Cat();
                 //newCat.position.Y = (i / 10) + (grassBackground.Width / 2);
@@ -64,6 +64,8 @@ namespace HungryGamesSimulatorCatsEdition
             grassBackground = Content.Load<Texture2D>("grass");
             GlobalCatVisuals.debugCat = Content.Load<Texture2D>("cat");
 
+            UiManager.fontFace = Content.Load<SpriteFont>("fontface");
+
             foreach (string path in GlobalCatVisuals.textures)
             {
                 GlobalCatVisuals.contentKeys.Add(path);
@@ -81,11 +83,13 @@ namespace HungryGamesSimulatorCatsEdition
 
             // TODO: Add your update logic here
 
-
-            /*foreach (Cat cat in cats)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
-                cat.TestMove();
-            }*/
+                foreach (Cat cat in cats)
+                {
+                    cat.TestMove();
+                } 
+            }
 
 
             base.Update(gameTime);

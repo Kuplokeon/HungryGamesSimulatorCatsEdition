@@ -18,6 +18,8 @@ namespace HungryGamesSimulatorCatsEdition
 
         public Point position;
 
+        public List<Relationship> relationships = new List<Relationship> ();
+
         public Cat()
         {
             Awake();
@@ -45,6 +47,46 @@ namespace HungryGamesSimulatorCatsEdition
 
             visuals.AutoLoad();
         }
+
+        public void SetRelationshipStatus(Cat other, RelationshipLevel level)
+        {
+            foreach (Relationship relationship in relationships)
+            {
+                if (relationship.other == other)
+                {
+                    relationship.level = level;
+                    return;
+                }
+            }
+
+            //no relationship found, making a new one.
+            relationships.Add(new Relationship(other, level));
+        }
+
+        public RelationshipLevel GetRelationshipStatus(Cat other)
+        {
+            foreach (Relationship relationship in relationships)
+            {
+                if (relationship.other == other)
+                {
+                    return relationship.level;
+                }
+            }
+
+            return RelationshipLevel.Stranger;
+        }
+    }
+
+    public class Relationship
+    {
+        public Cat other;
+        public RelationshipLevel level;
+
+        public Relationship (Cat other, RelationshipLevel level)
+        {
+            this.other = other;
+            this.level = level;
+        }
     }
 
     public class CatVisuals
@@ -53,18 +95,34 @@ namespace HungryGamesSimulatorCatsEdition
         public Color leftEye = Color.CornflowerBlue;
         public Color rightEye = Color.CornflowerBlue;
 
-        public List<Texture2D> decorations = new List<Texture2D> ();
+        public List<CatDecoration> decorations = new List<CatDecoration> ();
 
         public void AutoLoad()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < Cat.random.Next(1, 6); i++)
             {
-                decorations.Add(
+                decorations.Add(new CatDecoration(
                     GlobalCatVisuals.contents[
                         GlobalCatVisuals.contentKeys[
                             Cat.random.Next(0, GlobalCatVisuals.contents.Count)
-                            ]]);
+                            ]],
+                            new Color(
+                                Cat.random.Next(50, 100) / 100f,
+                                Cat.random.Next(50, 100) / 100f,
+                                Cat.random.Next(50, 100) / 100f)));
             }
+        }
+    }
+
+    public class CatDecoration
+    {
+        public Texture2D texture;
+        public Color color;
+
+        public CatDecoration(Texture2D texture, Color color)
+        {
+            this.texture = texture;
+            this.color = color;
         }
     }
 
@@ -74,20 +132,36 @@ namespace HungryGamesSimulatorCatsEdition
         {
             Rectangle drawRect = new Rectangle(catToDraw.position, CameraScript.tileSize);
 
+            drawRect = CameraScript.WorldRectToScreenRect(drawRect);
+
             spriteBatch.Draw(
                 GlobalCatVisuals.debugCat,
-                CameraScript.WorldRectToScreenRect(drawRect),
+                drawRect,
                 catToDraw.visuals.furColor);
 
             if (CameraScript.zoom < 2)
             {
-                foreach (Texture2D decoration in catToDraw.visuals.decorations)
+                foreach (CatDecoration decoration in catToDraw.visuals.decorations)
                 {
                     spriteBatch.Draw(
-                        decoration,
-                        CameraScript.WorldRectToScreenRect(drawRect),
-                        Color.White);
+                        decoration.texture,
+                        drawRect,
+                        decoration.color);
                 }
+            }
+
+            if (CameraScript.zoom < 1)
+            {
+                spriteBatch.DrawString(
+                    UiManager.fontFace, 
+                    catToDraw.name, 
+                    drawRect.Center.ToVector2(), 
+                    Color.DarkRed,
+                    0,
+                    Vector2.Zero,
+                    3,
+                    SpriteEffects.None,
+                    0);
             }
         }
     }
@@ -120,6 +194,70 @@ namespace HungryGamesSimulatorCatsEdition
             "grenn",
             "mini",
             "centi",
+            "yippee",
+            "rose",
+            "pik",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple",
+            "pink",
+            "grey",
+            "gray",
+            "experiment",
+            "ESP",
+            "george",
+            "tender",
+            "loving",
+            "hugging",
+            "heart",
+            "cherry",
+            "maggot",
+            "flea",
+            "meat",
+            "wood",
+            "soft",
+            "water",
+            "magma",
+            "lava",
+            "rock",
+            "shotgun",
+            "shrink",
+            "grow",
+            "machine",
+            "self",
+            "double ",
+            "baby ",
+            "monster",
+            "mono",
+            "poly",
+            "bi",
+            "pan",
+            "refriger",
+            "psycho",
+            "hit",
+#region bad language words
+            "shit",
+            "bitch",
+            "bastard",
+            "ass",
+            "pussy",
+            "wet ass",
+#endregion
+            "sexy",
+            "moist",
+            "morb",
+            "prison",
+            "back",
+            "tater",
+            "Mr. ",
+            "Ms. ",
+            "Mrs. ",
+            "Dr. ",
+            "final ",
+            "",
         };
 
         static string[] lastNames = new string[]
@@ -136,8 +274,43 @@ namespace HungryGamesSimulatorCatsEdition
             "pon",
             "ton",
             "men",
+            "money",
             "tan",
+            "jail",
             "deth",
+            "quartz",
+            "bean",
+            "killer",
+            "man",
+            "woman",
+            "min",
+            "dog",
+            " eater",
+            "heart",
+            "soul",
+            "mind",
+            "room",
+            "rooms",
+            "berry",
+            "blood",
+            "eye",
+            "brain",
+            "loaf",
+            "3000",
+            "melt",
+            "rot",
+            "stone",
+            "ius",
+            " store",
+            "athon",
+            "path",
+            "ator",
+            " warrior",
+            "inator",
+            "sexual",
+            "tot",
+            "toe",
+            "",
         };
 
         public static string GetRandomName()
@@ -161,7 +334,7 @@ namespace HungryGamesSimulatorCatsEdition
             "back legs",
             "eyes",
             "front legs",
-            "head",
+            //"head",
             "tail",
             "torso",
 
@@ -175,6 +348,27 @@ namespace HungryGamesSimulatorCatsEdition
             "decorations/pants",
             "decorations/wizard-hat",
             "decorations/yippee",
+            "decorations/amogus",
+            "decorations/refrigerator hat",
+            "decorations/tummy fur",
+            "decorations/straw hat",
+            "decorations/sunglasses",
+            "decorations/spamton glasses",
+            "decorations/glasses",
+            "decorations/spamton nose",
+            "decorations/megamind cap",
+            "decorations/spider legs",
+            "decorations/contraption",
+            "decorations/skateboard",
+            "decorations/smile",
+            "decorations/eyebrow",
+            "decorations/slight tear",
+            "decorations/blush",
+            "decorations/unicorn horn",
+            "decorations/goat horns",
+            "decorations/big eyes",
+            "decorations/sword in back",
+            "decorations/eyebrows",
         };
     }
 }
