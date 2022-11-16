@@ -29,8 +29,6 @@ namespace HungryGamesSimulatorCatsEdition
 
         Texture2D grassBackground;
 
-        List<Cat> cats = new List<Cat>();
-
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -52,7 +50,7 @@ namespace HungryGamesSimulatorCatsEdition
                 newCat.position.Y = (i / 10);
                 //newCat.position.X = (i % 10) + (grassBackground.Height / 2);
                 newCat.position.X = (i % 10);
-                cats.Add(newCat);
+                SimRunner.cats.Add(newCat);
             }
         }
 
@@ -83,14 +81,15 @@ namespace HungryGamesSimulatorCatsEdition
 
             // TODO: Add your update logic here
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            if (Keyboard.GetState().IsKeyDown(Keys.Q))
             {
-                foreach (Cat cat in cats)
+                foreach (Cat cat in SimRunner.cats)
                 {
                     cat.TestMove();
                 } 
             }
 
+            SimRunner.Update();
 
             base.Update(gameTime);
         }
@@ -117,7 +116,7 @@ namespace HungryGamesSimulatorCatsEdition
                 Color.White);
 
             //draw cats
-            foreach (Cat cat in cats)
+            foreach (Cat cat in SimRunner.cats)
             {
                 DrawCatToScreen.DrawCat(_spriteBatch, cat);
             }

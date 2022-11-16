@@ -53,9 +53,14 @@ namespace HungryGamesSimulatorCatsEdition
         Married = 6,
     }
 
-    internal class SimEventHandler
+    public static class SimEventHandler
     {
+        public static List<SimulationEvent> allPossibleEvents;
 
+        public void LoadAllPossibleEvents()
+        {
+            //
+        }
     }
 
     public class SimulationEvent
