@@ -42,11 +42,17 @@ namespace HungryGamesSimulatorCatsEdition
             TimeOfDay.Night,
         };
 
+        static bool justHitSpace;
         public static void Update()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && !justHitSpace)
             {
                 RunRound();
+                justHitSpace = true;
+            }
+            else if (!Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                justHitSpace = false;
             }
         }
 
@@ -138,18 +144,36 @@ namespace HungryGamesSimulatorCatsEdition
             {
                 ApplyActivity(request);
             }
+
+            foreach (Cat cat in cats)
+            {
+                cat.TestMove();
+            }
         }
 
         public static void ApplyActivity(ActivityRequest request)
         {
-            Debug.WriteLine(request.GetDialogue());
-            //
+            string dialogue = request.GetDialogue();
 
+            Debug.WriteLine(dialogue);
+
+            foreach (int i in request.catsList)
+            {
+                cats[i].lastDialogue = dialogue;
+
+                Debug.WriteLine(cats[i].name + " --> " + dialogue);
+            }
+            
             //remove any killed cats from list
         }
 
         public static bool SimulationEventIsUsable(SimulationEvent simulationEvent, List<Cat> involvedCats)
         {
+            if (!simulationEvent.requiredPlayers.NumberIsValid(involvedCats.Count))
+            {
+                return false;
+            }
+
             return true;
         }
 
@@ -173,6 +197,18 @@ namespace HungryGamesSimulatorCatsEdition
             return FindNearbyCats(host.position, host);
         }
 
+        public static Cat GetCatInPostion(Point pos)
+        {
+            foreach (Cat cat in cats)
+            {
+                if (cat.position == pos)
+                {
+                    return cat;
+                }
+            }
+            return null;
+        }
+
         public static List<int> FindNearbyCats(Point position, Cat catToExclude)
         {
             List<int> nearbyCats = new List<int> ();
@@ -188,6 +224,10 @@ namespace HungryGamesSimulatorCatsEdition
                         < catDetectionRange)
                     {
                         nearbyCats.Add(counter);
+                        if (nearbyCats.Count >= 5)
+                        {
+                            return nearbyCats;
+                        }
                     }
                 }
                 counter++;
@@ -207,6 +247,29 @@ namespace HungryGamesSimulatorCatsEdition
 
             return currentTimeOfDay == TimeOfDay.Morning || currentTimeOfDay == TimeOfDay.Day;
         }
+
+        public static Cat GetCatClosestToCenter()
+        {
+            if (cats.Count == 0)
+            {
+                return null;
+            }
+
+            Cat closestToCenter = cats[0];
+            float closestToCenterDist = 999999;
+            foreach (Cat cat in cats)
+            {
+                float newDistance = CameraScript.DistanceToCenterOfScreen(cat.position);
+
+                if (newDistance < closestToCenterDist)
+                {
+                    closestToCenterDist = newDistance;
+                    closestToCenter = cat;
+                }
+            }
+
+            return closestToCenter;
+        }
     }
 
     /// <summary>
@@ -225,17 +288,18 @@ namespace HungryGamesSimulatorCatsEdition
 
         public string GetDialogue()
         {
-            string dialogueOutput = simulationEvent.dialogue;
+            string dialogueOutput = simulationEvent.dialogue.Trim();
 
             if (dialogueOutput.Contains("Catlist"))
             {
-                dialogueOutput.Replace("Catlist", GetCatList());
+                dialogueOutput = dialogueOutput.Replace("Catlist", GetCatList());
             }
 
             int counter = 0;
             foreach (int i in catsList)
             {
-                dialogueOutput = dialogueOutput.Replace("Cat" + counter, SimRunner.cats[i].name);
+                dialogueOutput = dialogueOutput.Replace("Cat" + (counter + 1), SimRunner.cats[i].name);
+                Debug.WriteLine(SimRunner.cats[i].name);
                 counter++;
             }
 

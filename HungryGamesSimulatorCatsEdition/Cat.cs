@@ -12,23 +12,39 @@ namespace HungryGamesSimulatorCatsEdition
     {
         public static Random random = new Random();
 
-        public string name;
+        public string name = "New Cat";
+        public string lastDialogue = "...";
 
         public CatVisuals visuals = new CatVisuals ();
 
-        public Point position;
+        public Point position = new Point (0);
+        public Vector2 drawPosition = new Vector2 (0, 500);
 
         public List<Relationship> relationships = new List<Relationship> ();
+
+        int speed;
 
         public Cat()
         {
             Awake();
         }
 
+        public void Update()
+        {
+            drawPosition += (position.ToVector2() - drawPosition) / 100f;
+        }
+
         public void TestMove()
         {
-            position.X += random.Next(-1, 2);
-            position.Y += random.Next(-1, 2);
+            Point targetPosition = position;
+
+            targetPosition.X += random.Next(-1, 2) * speed;
+            targetPosition.Y += random.Next(-1, 2) * speed;
+
+            if (SimRunner.GetCatInPostion(targetPosition) == null)
+            {
+                position = targetPosition;
+            }
         }
 
         public void Awake()
@@ -38,6 +54,8 @@ namespace HungryGamesSimulatorCatsEdition
             position = new Point(
                 random.Next(1, CameraScript.screenSize.X), 
                 random.Next(1, CameraScript.screenSize.Y));
+
+            speed = random.Next(2, 11);
 
             visuals.furColor = new Color(
                 random.Next(50, 100) / 100f,
@@ -130,9 +148,11 @@ namespace HungryGamesSimulatorCatsEdition
     {
         public static void DrawCat(SpriteBatch spriteBatch, Cat catToDraw)
         {
-            Rectangle drawRect = new Rectangle(catToDraw.position, CameraScript.tileSize);
+            //Rectangle drawRect = new Rectangle((catToDraw.drawPosition).ToPoint(), CameraScript.tileSize);
+            //drawRect = CameraScript.WorldRectToScreenRect(drawRect);
 
-            drawRect = CameraScript.WorldRectToScreenRect(drawRect);
+            Rectangle drawRect = CameraScript.GenerateDrawRect(catToDraw.drawPosition, CameraScript.tileSize);
+
 
             spriteBatch.Draw(
                 GlobalCatVisuals.debugCat,
@@ -153,15 +173,28 @@ namespace HungryGamesSimulatorCatsEdition
             if (CameraScript.zoom < 1)
             {
                 spriteBatch.DrawString(
-                    UiManager.fontFace, 
-                    catToDraw.name, 
-                    drawRect.Center.ToVector2(), 
+                    UiManager.fontFace,
+                    catToDraw.name,
+                    drawRect.Center.ToVector2() + new Vector2(-100, -200),
                     Color.DarkRed,
                     0,
                     Vector2.Zero,
                     3,
                     SpriteEffects.None,
                     0);
+
+                if (catToDraw == SimRunner.GetCatClosestToCenter()) {
+                    spriteBatch.DrawString(
+                        UiManager.fontFace,
+                        catToDraw.lastDialogue,
+                        drawRect.Center.ToVector2() + new Vector2 (-200, 125),
+                        Color.DarkRed,
+                        0,
+                        Vector2.Zero,
+                        2,
+                        SpriteEffects.None,
+                        0);
+                } 
             }
         }
     }
@@ -392,6 +425,7 @@ namespace HungryGamesSimulatorCatsEdition
             "decorations/big eyes",
             "decorations/sword in back",
             "decorations/eyebrows",
+            "decorations/wheels",
         };
     }
 }

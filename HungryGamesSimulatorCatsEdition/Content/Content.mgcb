@@ -37,18 +37,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/amogus.png
 
-#begin cat-visuals/decorations/amogus.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/amogus.png
-
 #begin cat-visuals/decorations/big eyes.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -73,18 +61,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/blush.png
 
-#begin cat-visuals/decorations/blush.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/blush.png
-
 #begin cat-visuals/decorations/chad-chin.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -96,30 +72,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/chad-chin.png
-
-#begin cat-visuals/decorations/chad-chin.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/chad-chin.png
-
-#begin cat-visuals/decorations/chest-tuff.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/chest-tuff.png
 
 #begin cat-visuals/decorations/chest-tuff.png
 /importer:TextureImporter
@@ -145,18 +97,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/cloak.png
 
-#begin cat-visuals/decorations/cloak.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/cloak.png
-
 #begin cat-visuals/decorations/collar.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -168,30 +108,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/collar.png
-
-#begin cat-visuals/decorations/collar.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/collar.png
-
-#begin cat-visuals/decorations/contraption.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/contraption.png
 
 #begin cat-visuals/decorations/contraption.png
 /importer:TextureImporter
@@ -217,18 +133,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/crying-eyes.png
 
-#begin cat-visuals/decorations/crying-eyes.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/crying-eyes.png
-
 #begin cat-visuals/decorations/ear-fluff.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -240,30 +144,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/ear-fluff.png
-
-#begin cat-visuals/decorations/ear-fluff.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/ear-fluff.png
-
-#begin cat-visuals/decorations/eyebrow.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/eyebrow.png
 
 #begin cat-visuals/decorations/eyebrow.png
 /importer:TextureImporter
@@ -301,30 +181,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/flowers.png
 
-#begin cat-visuals/decorations/flowers.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/flowers.png
-
-#begin cat-visuals/decorations/glasses.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/glasses.png
-
 #begin cat-visuals/decorations/glasses.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -361,18 +217,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/megamind cap.png
 
-#begin cat-visuals/decorations/megamind cap.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/megamind cap.png
-
 #begin cat-visuals/decorations/pants.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -384,30 +228,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/pants.png
-
-#begin cat-visuals/decorations/pants.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/pants.png
-
-#begin cat-visuals/decorations/refrigerator hat.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/refrigerator hat.png
 
 #begin cat-visuals/decorations/refrigerator hat.png
 /importer:TextureImporter
@@ -433,18 +253,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/skateboard.png
 
-#begin cat-visuals/decorations/skateboard.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/skateboard.png
-
 #begin cat-visuals/decorations/slight tear.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -456,30 +264,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/slight tear.png
-
-#begin cat-visuals/decorations/slight tear.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/slight tear.png
-
-#begin cat-visuals/decorations/smile.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/smile.png
 
 #begin cat-visuals/decorations/smile.png
 /importer:TextureImporter
@@ -505,30 +289,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/spamton glasses.png
 
-#begin cat-visuals/decorations/spamton glasses.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/spamton glasses.png
-
-#begin cat-visuals/decorations/spamton nose.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/spamton nose.png
-
 #begin cat-visuals/decorations/spamton nose.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -553,18 +313,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/spider legs.png
 
-#begin cat-visuals/decorations/spider legs.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/spider legs.png
-
 #begin cat-visuals/decorations/straw hat.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -576,30 +324,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/straw hat.png
-
-#begin cat-visuals/decorations/straw hat.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/straw hat.png
-
-#begin cat-visuals/decorations/sunglasses.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/sunglasses.png
 
 #begin cat-visuals/decorations/sunglasses.png
 /importer:TextureImporter
@@ -637,18 +361,6 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/tummy fur.png
 
-#begin cat-visuals/decorations/tummy fur.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/tummy fur.png
-
 #begin cat-visuals/decorations/unicorn horn.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -661,7 +373,7 @@
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/unicorn horn.png
 
-#begin cat-visuals/decorations/wizard-hat.png
+#begin cat-visuals/decorations/wheels.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -671,7 +383,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/wizard-hat.png
+/build:cat-visuals/decorations/wheels.png
 
 #begin cat-visuals/decorations/wizard-hat.png
 /importer:TextureImporter
@@ -684,18 +396,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:cat-visuals/decorations/wizard-hat.png
-
-#begin cat-visuals/decorations/yippee.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:cat-visuals/decorations/yippee.png
 
 #begin cat-visuals/decorations/yippee.png
 /importer:TextureImporter

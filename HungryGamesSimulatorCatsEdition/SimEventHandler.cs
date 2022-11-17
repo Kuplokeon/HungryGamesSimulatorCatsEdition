@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,9 +59,19 @@ namespace HungryGamesSimulatorCatsEdition
     {
         public static List<SimulationEvent> allPossibleEvents;
 
-        public void LoadAllPossibleEvents()
+        public static void LoadAllPossibleEvents()
         {
-            //
+            allPossibleEvents = new List<SimulationEvent>();
+
+            string dataText = File.ReadAllText("Content/SimEvents.txt");
+
+            string[] splitdata = dataText.Split('\n');
+
+            for (int i = 0; i < splitdata.Length; i++)
+            {
+                Debug.WriteLine(">>> LOADING EVENT: " + splitdata[i]);
+                allPossibleEvents.Add(new SimulationEvent(splitdata[i]));
+            }
         }
     }
 
@@ -148,17 +160,17 @@ namespace HungryGamesSimulatorCatsEdition
 
         public IntegerRequirement(string inputString)
         {
-            string stringToParse = inputString;
+            string stringToParse = inputString.Trim();
 
-            switch (inputString[0])
+            switch (stringToParse[0])
             {
                 case '<':
                     comparison = NumComparison.LessThan;
-                    stringToParse.Remove(0, 1);
+                    stringToParse = stringToParse.Replace("<", "");
                     break;
                 case '>':
                     comparison = NumComparison.GreaterThan;
-                    stringToParse.Remove(0,1);
+                    stringToParse = stringToParse.Replace(">", "");
                     break;
             }
 
